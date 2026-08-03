@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Benni Samuel</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
      <link rel="stylesheet" href="css/bootstrap.css">
@@ -473,6 +473,10 @@ justify-content:center;
 </style>
 
 <body>
+    <div style="z-index: 9999; background-color: blueviolet; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;" id="preloader" class="position-fixed top-0 start-0" >
+     <img width="16%" src="img/logo.png" alt="">   
+    
+    </div>
     <div style="background-image: url(img/nebula.png); background-size: cover;">
         <div id="nav" class="container">
             <!-- ================= NAVBAR ================= -->
@@ -969,14 +973,20 @@ justify-content:center;
 
         </footer>
         <a href="#nav"> <i style="font-size: 40px; color: dodgerblue;" class="fa-solid fa-circle-arrow-up fixed-bottom mt-5"></i>
-                    </a>
+        </a>
     </div>
     
     
 <script src="js/bootstrap.js"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init(5000);
+</script>
+<script>
+    setTimeout(function(){
+        document.getElementById("preloader").style.display="none"
+    },2000)
 </script>
 </body>
 </html>
