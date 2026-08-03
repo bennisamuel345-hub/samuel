@@ -295,6 +295,181 @@
 }
 
 }
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+
+/* Footer */
+
+.footer{
+padding-top:120px;
+color:#c8d2e0;
+position:relative;
+overflow:hidden;
+}
+
+/* CTA Card */
+
+
+.cta-card h2{
+color:#fff;
+font-size:30px;
+margin-bottom:10px;
+font-weight:600;
+}
+
+.cta-card p{
+color:#eef5ff;
+margin-bottom:0;
+}
+
+.cta-buttons{
+display:flex;
+gap:15px;
+}
+
+.btn-start{
+
+background:#08142c;
+color:white;
+padding:13px 28px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-start:hover{
+background:#000;
+}
+
+.btn-contact{
+
+border:1px solid white;
+color:white;
+padding:13px 28px;
+border-radius:50px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn-contact:hover{
+background:white;
+color:#2d6bff;
+}
+
+.footer-content{
+padding-top:80px;
+padding-bottom:50px;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:white;
+margin-bottom:25px;
+}
+
+.logo i{
+color:#6c63ff;
+margin-right:10px;
+}
+
+.footer h6{
+color:white;
+margin-bottom:20px;
+font-weight:600;
+letter-spacing:1px;
+font-size:13px;
+text-transform:uppercase;
+}
+
+.footer ul{
+list-style:none;
+padding:0;
+}
+
+.footer li{
+margin-bottom:12px;
+}
+
+.footer a{
+text-decoration:none;
+color:#b6c0d1;
+transition:.3s;
+font-size:15px;
+}
+
+.footer a:hover{
+color:#4ca7ff;
+padding-left:5px;
+}
+
+.footer-bottom{
+
+border-top:1px solid rgba(255,255,255,.08);
+
+padding:25px 0;
+
+font-size:14px;
+
+color:#98a8c0;
+
+}
+
+.status{
+
+border:1px solid #29e089;
+
+color:#29e089;
+
+padding:4px 14px;
+
+border-radius:40px;
+
+font-size:12px;
+
+}
+
+@media(max-width:991px){
+
+.cta-card{
+
+position:relative;
+
+top:0;
+
+margin-bottom:50px;
+
+transform:none;
+
+left:auto;
+
+width:100%;
+
+}
+
+.footer{
+padding-top:40px;
+}
+
+.cta-card{
+text-align:center;
+justify-content:center;
+}
+
+.cta-buttons{
+margin-top:20px;
+justify-content:center;
+}
+
+}
+
 </style>
 
 <body>
@@ -309,7 +484,7 @@
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul style="font-weight: 600;" class="navbar-nav ms-4 ">
+                    <ul style="font-weight: 600;" class="navbar-nav ms-5 ">
                         <li class="nav-item">
                         <a style="color: white; font-weight: 600;" class="nav-link active" aria-current="page" href="#"> Home </a>
                         </li>
@@ -329,13 +504,13 @@
                         <a style="color: white;font-weight: 600;" class="nav-link" href="#"> Contact </a>
                         </li>
 
-                        <div class="ms-5">
+                        <div class="ms-5 mt-1">
                             <a href="https://Wa.me/+2347015660523">
-                                <i style="font-size: 40px; color: white;" class="fa-brands fa-whatsapp"></i>
+                                <i style="font-size: 25px; color: white;" class="fa-brands fa-whatsapp"></i>
                             </a>
-                            <i style="font-size: 40px; color: white;" class="fab fa-twitter"></i>
-                            <i style="font-size: 40px; color: white;" class="fab fa-linkedin-in"></i>
-                            <i style="font-size: 40px; color: white;" class="fab fa-instagram"></i>
+                            <i style="font-size: 25px; color: white;" class="fab fa-twitter"></i>
+                            <i style="font-size: 25px; color: white;" class="fab fa-linkedin-in"></i>
+                            <i style="font-size: 25px; color: white;" class="fab fa-instagram"></i>
 
                         </div>
                         
@@ -346,11 +521,11 @@
                 </div>
             </nav>
         
-           <div  data-aos="zoom-in"  class="row mt-5">
+           <div  data-aos="zoom-in"  class="row mt-5 mb-5">
 
                 <div class="col-lg-6 col-2">
 
-                    <p style=" font-size: 120px; color: white; font-weight: 600;"> Benni<br> <span style="color: dodgerblue;">Samuel</span></p>
+                    <p style=" font-size: 100px; color: white; font-weight: 600;"> Benni<br> <span style="color: dodgerblue;">Samuel</span></p>
 
                     <div class="d-flex align-items-center ">
                         <p style="color: white; font-weight: 400; font-size: 20px;"> Nigeria based </p>
@@ -359,14 +534,14 @@
                     
                 </div>
 
-                <div class="col-lg-6 col-12 ">
-                   <img width="70%" src="img/face.png" alt=""> 
+                <div class="col-lg-6 col-12">
+                   <img width="100%" src="img/face.png" alt=""> 
                 </div>
 
 
             </div>
 
-            <div  data-aos="zoom-in"  class="row mt-5 g-4">
+            <div  data-aos="zoom-in"  class="row mt-5 mb-5 g-4">
                 <div class="col-lg-4 col-12">
                     <div style="background-color: midnightblue;" class="card">
                         <div class="card-body">
@@ -405,11 +580,11 @@
 
             </div>
 
-            <h6  data-aos="zoom-in"  style="color: dodgerblue;" class="text-center mt-5" id="abt"> About Me </h6>
+            <h6  data-aos="zoom-in"  style="color: dodgerblue;" class="text-center mt-5 mb-5" id="abt"> About Me </h6>
 
             <h3  data-aos="zoom-in"  style="font-weight: 600; color: white;" class="text-center text-light"> A Passionate Developer<br> Who Loves To Code</h3>
 
-            <div  data-aos="zoom-in"  class="row mt-5">
+            <div  data-aos="zoom-in"  class="row mt-5 mb-5">
                 <div  data-aos="zoom-in"  class="col-lg-6 col-6">
                     <section class="about-image">
 
@@ -469,13 +644,13 @@
                         <div class="column">
 
                             <div class="item">
-                                <div class="title">Address</div>
-                                <div class="value">17, Abuja, Nigeria.</div>
+                                <div class="title">coding stats</div>
+                                <div class="value">Full Stack</div>
                             </div>
 
                             <div class="item">
                                 <div class="title">DOB</div>
-                                <div class="value">Nov 13, 2009</div>
+                                <div class="value">Nov 13, 2003</div>
                             </div>
 
                             <div class="item">
@@ -487,14 +662,14 @@
 
                     </div>
 
-                    <button  data-aos="zoom-in"  class="mt-3 py-2 " style="border-radius: 20px; background-color: dodgerblue; color: white; border: none; width: 40%;"> Download CV </button>
+                    <button  data-aos="zoom-in"  class="mt-3 py-2 " style="border-radius: 20px; background-color: dodgerblue; color: white; border: none; width: 40%;"> Projects </button>
 
                 </div>
 
             </div>
 
 
-            <div  data-aos="zoom-in"  class="row mt-5">
+            <div  data-aos="zoom-in"  class="row mt-5 mb-5">
                 <div class="col-lg-3 col-6 mt-2">
                     <div class=" d-flex justify-content-center align-items-center" style="background-color: midnightblue; height: 150px; border-radius: 20px;">
                         <div class=" d-flex text-center mt-4">
@@ -523,7 +698,7 @@
                     <div class=" d-flex justify-content-center align-items-center"  style="background-color: midnightblue; height: 150px; border-radius: 20px;">
 
                         <div class=" d-flex text-center mt-4">
-                            <h1 style="color: dodgerblue;"> 3K </h1>
+                            <h1 style="color: dodgerblue;"> 1k </h1>
                             <p class="text-light ms-2"> Total<br>Projects </p>
                         </div>
 
@@ -546,7 +721,7 @@
 
             </div>
 
-            <h6  data-aos="zoom-in"  style="color: dodgerblue;" class="text-center mt-5"> Skills </h6>
+            <h6  data-aos="zoom-in"  style="color: dodgerblue;" class="text-center mt-5 mb-5"> Skills </h6>
              <h3  data-aos="zoom-in"  style="font-weight: 600; color: white;" class="text-center text-light"> I Work Hard To Improve My<br> Skills Regularly</h3>
 
             <div  data-aos="zoom-in"  class="row mt-5 ">
@@ -637,13 +812,164 @@
                
                     
 
-                 <a href="#nav"> <i style="font-size: 40px; color: dodgerblue;" class="fa-solid fa-circle-arrow-up fixed-bottom mt-5"></i>
-                    </a>   
+                    
             </div>
+
+            
  
         </div>
 
+        <footer style="background-color: midnightblue;" class="footer mt-5 mb-5">
 
+        <div class="footer-content">
+
+        <div class="row gy-5">
+
+        <div class="col-lg-3">
+
+        <img width="70%" src="img/logo.png" alt="">
+
+        </div>
+
+        <div class="col-6 col-md-4 col-lg">
+
+        <h6>Features</h6>
+
+        <ul>
+
+        <li><a href="#">HTML</a></li>
+
+        <li><a href="#">CSS</a></li>
+
+        <li><a href="#">Javascript</a></li>
+
+        <li><a href="#"> SVG </a></li>
+
+        <li><a href="#"> Bootstrap</a></li>
+
+        </ul>
+
+        </div>
+
+        <div class="col-6 col-md-4 col-lg">
+
+        <h6>Resources</h6>
+
+        <ul>
+
+        <li><a href="#">Blog</a></li>
+
+        <li><a href="#">Documentation</a></li>
+
+        <li><a href="#">Support</a></li>
+
+        <li><a href="#">Supported Hardware</a></li>
+
+        </ul>
+
+        </div>
+
+        <div class="col-6 col-md-4 col-lg">
+
+        <h6>Pricing</h6>
+
+        <ul>
+
+        <li><a href="#">Pricing Overview</a></li>
+
+        <li><a href="#">Private Plans</a></li>
+
+        <li><a href="#">High Volume Data</a></li>
+
+        <li><a href="#">Coverage Map</a></li>
+
+        </ul>
+
+        </div>
+
+        <div class="col-6 col-md-4 col-lg">
+
+        <h6>Developers</h6>
+
+        <ul>
+
+        <li><a href="#">Forum</a></li>
+
+        <li><a href="#">API Docs</a></li>
+
+        <li><a href="#">Open Source</a></li>
+
+        </ul>
+
+        </div>
+
+        <div class="col-6 col-md-4 col-lg">
+
+        <h6>Company</h6>
+
+        <ul>
+
+        <li><a href="#">About</a></li>
+
+        <li><a href="#">Blog</a></li>
+
+        <li><a href="#">Careers</a></li>
+
+        <li><a href="#">Partnerships</a></li>
+
+        </ul>
+
+        </div>
+
+        <div class="col-6 col-md-4 col-lg">
+
+        <h6>Social</h6>
+
+        <ul>
+
+        <li><a href="#"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+
+        <li><a href="#"><i class="bi bi-facebook"></i> Whatsapp</a></li>
+
+        <li><a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+
+        <li><a href="#"><i class="bi bi-github"></i> GitHub</a></li>
+
+        </ul>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+        <div class="row align-items-center">
+
+        <div class="col-md-6 text-center text-md-start">
+
+        © 2026 Folio &nbsp;&nbsp;
+        <a href="#">Terms</a> &nbsp;&nbsp;
+        <a href="#">Privacy</a>
+
+        </div>
+
+        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+
+        <span class="status">
+         Contact now
+        </span>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </footer>
+        <a href="#nav"> <i style="font-size: 40px; color: dodgerblue;" class="fa-solid fa-circle-arrow-up fixed-bottom mt-5"></i>
+                    </a>
     </div>
     
     
