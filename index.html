@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.info-card{
+    width:100%;
+    max-width:700px;
+    border:4px solid rgba(255,255,255,.18);
+    border-radius:12px;
+    display:flex;
+    overflow:hidden;
+}
+
+.column{
+    flex:1;
+    padding:25px 30px;
+}
+
+.column:first-child{
+    border-right:4px solid rgba(255,255,255,.18);
+}
+
+.item{
+    margin-bottom:22px;
+}
+
+.item:last-child{
+    margin-bottom:0;
+}
+
+.title{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.value{
+    color:#d5d7e4;
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* Mobile Responsive */
+@media(max-width:600px){
+
+    .info-card{
+        flex-direction:column;
+    }
+
+    .column:first-child{
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.18);
+    }
+
+    .column{
+        padding:20px;
+    }
+
+    .title{
+        font-size:17px;
+    }
+
+    .value{
+        font-size:16px;
+    }
+}
+   *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+
+.about-image{
+
+    position:relative;
+    width:450px;
+    height:520px;
+
+    margin:auto;
+}
+
+/* Main Image */
+
+.main-image{
+
+    position:absolute;
+
+    top:0;
+    right:0;
+}
+
+.main-image img{
+
+    width:300px;
+    height:390px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    display:block;
+}
+
+/* Small Image */
+
+.small-image{
+
+    position:absolute;
+
+    left:0;
+    bottom:95px;
+}
+
+.small-image img{
+
+    width:230px;
+    height:210px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    display:block;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+/* Icon */
+
+.icon-box{
+
+    position:absolute;
+
+    top:130px;
+    left:55px;
+
+    width:72px;
+    height:72px;
+
+    background:#09c8ff;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-size:34px;
+
+    z-index:10;
+}
+
+/* Experience */
+
+.experience{
+
+    position:absolute;
+
+    left:240px;
+    bottom:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+}
+
+.line{
+
+    width:6px;
+    height:75px;
+
+    background:#07d6ff;
+
+    border-radius:10px;
+}
+
+.experience h2{
+
+    color:white;
+
+    font-size:58px;
+
+    line-height:1;
+}
+
+.experience span{
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    line-height:1.4;
+}
+
+/*============================*/
+/* Responsive */
+/*============================*/
+
+@media(max-width:768px){
+
+.about-image{
+
+    width:100%;
+    height:auto;
+
+    flex-direction:column;
+
+
+    gap:25px;
+}
+
+.main-image,
+.small-image,
+.icon-box,
+.experience{
+
+    position:static;
+}
+
+.main-image img{
+
+    width:90%;
+    max-width:330px;
+
+    height:auto;
+}
+
+.small-image img{
+
+    width:90%;
+    max-width:260px;
+
+    height:auto;
+}
+
+.icon-box{
+
+    width:70px;
+    height:70px;
+
+    margin-top:-15px;
+}
+
+.experience{
+
+    justify-content:center;
+
+    margin-top:10px;
+}
+
+.line{
+
+    height:60px;
+}
+
+.experience h2{
+
+    font-size:46px;
+}
+
+.experience span{
+
+    font-size:20px;
+}
+
+}
+</style>
+
+<body>
+    <div style="background-image: url(img/nebula.png); background-size: cover;">
+        <div id="nav" class="container">
+            <!-- ================= NAVBAR ================= -->
+
+            <nav class="navbar navbar-expand-lg bg-body-transparent  fixed-position">
+                <div sty class="container-fluid">
+                    <img width="16%" src="img/logo.png" alt="">
+                    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul style="font-weight: 600;" class="navbar-nav ms-4 ">
+                        <li class="nav-item">
+                        <a style="color: white; font-weight: 600;" class="nav-link active" aria-current="page" href="#"> Home </a>
+                        </li>
+                        <li class="nav-item">
+                        <a style="color: white; font-weight: 600;" class="nav-link" href="#abt"> About</a>
+                        </li>
+                        <li class="nav-item">
+                        <a style="color: white; font-weight: 600;" class="nav-link" href="#services.html"> Services </a>
+                        </li>
+                        <li class="nav-item">
+                        <a style="color: white;font-weight: 600;" class="nav-link" href="#"> Portfolio </a>
+                        </li>
+                        <li class="nav-item">
+                        <a style="color: white;font-weight: 600;" class="nav-link" href="#"> Blog </a>
+                        </li>
+                        <li class="nav-item">
+                        <a style="color: white;font-weight: 600;" class="nav-link" href="#"> Contact </a>
+                        </li>
+
+                        <div class="ms-5">
+                            <a href="https://Wa.me/+2347015660523">
+                                <i style="font-size: 40px; color: white;" class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <i style="font-size: 40px; color: white;" class="fab fa-twitter"></i>
+                            <i style="font-size: 40px; color: white;" class="fab fa-linkedin-in"></i>
+                            <i style="font-size: 40px; color: white;" class="fab fa-instagram"></i>
+
+                        </div>
+                        
+                            
+                    </ul> 
+                    </div>
+                    
+                </div>
+            </nav>
+        
+           <div  data-aos="zoom-in"  class="row mt-5">
+
+                <div class="col-lg-6 col-2">
+
+                    <p style=" font-size: 120px; color: white; font-weight: 600;"> Benni<br> <span style="color: dodgerblue;">Samuel</span></p>
+
+                    <div class="d-flex align-items-center ">
+                        <p style="color: white; font-weight: 400; font-size: 20px;"> Nigeria based </p>
+                        <p class="ms-3 "  style="color: white; font-size: 25px; font-weight: 800;"> Web designer</h3>
+                    </div>
+                    
+                </div>
+
+                <div class="col-lg-6 col-12 ">
+                   <img width="70%" src="img/face.png" alt=""> 
+                </div>
+
+
+            </div>
+
+            <div  data-aos="zoom-in"  class="row mt-5 g-4">
+                <div class="col-lg-4 col-12">
+                    <div style="background-color: midnightblue;" class="card">
+                        <div class="card-body">
+                            <i style="font-size: 40px; color: dodgerblue;" class="fa-solid fa-gear"></i>
+                            <h4 style="color: white;" class="mt-3"> Deeper Skillset </h4>
+                            <p class="mt-3 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quasi quas facere accusamus. Omnis iure sequi quisquam officiis facilis impedit labore.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div  data-aos="zoom-in"  class="col-lg-4 col-12">
+                    <div style="background-color: midnightblue;" class="card">
+                        <div class="card-body">
+                           <i style="font-size: 40px; color: dodgerblue;" class="fa-solid fa-briefcase"></i>
+                           <h4 style="color: white;" class="mt-3"> Creative Work  </h4>
+                            <p class="mt-3 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quasi quas facere accusamus. Omnis iure sequi quisquam officiis facilis impedit labore.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div  data-aos="zoom-in"  class="col-lg-4 col-12">
+                    <div style="background-color: midnightblue;" class="card">
+                        <div class="card-body">
+                           <i style="font-size: 40px; color: dodgerblue;" class="fa-regular fa-gem"></i>
+                           <h4 style="color: white;" class="mt-3"> Strong Dedication </h4>
+                            <p class="mt-3 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quasi quas facere accusamus. Omnis iure sequi quisquam officiis facilis impedit labore.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+               
+               
+
+            </div>
+
+            <h6  data-aos="zoom-in"  style="color: dodgerblue;" class="text-center mt-5" id="abt"> About Me </h6>
+
+            <h3  data-aos="zoom-in"  style="font-weight: 600; color: white;" class="text-center text-light"> A Passionate Developer<br> Who Loves To Code</h3>
+
+            <div  data-aos="zoom-in"  class="row mt-5">
+                <div  data-aos="zoom-in"  class="col-lg-6 col-6">
+                    <section class="about-image">
+
+                        <div  data-aos="zoom-in"  class="icon-box">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+
+                        <div  data-aos="zoom-in"  class="main-image">
+                            <img src="img/pic1.png" alt="Developer">
+                        </div>
+
+                        <div  data-aos="zoom-in"  class="small-image">
+                            <img src="img/pic2.png" alt="Working">
+                        </div>
+
+                        <div  data-aos="zoom-in"  class="experience">
+                            <div class="line"></div>
+
+                            <div  data-aos="zoom-in"  class="d-flex align-items-center">
+                                <h2>2</h2>
+                                <span class="ms-3">Successful<br>Years</span>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+
+
+                <div  data-aos="zoom-in"  class="col-lg-6 col-6">
+                    <h4  data-aos="zoom-in"  class="text-light"> My Bio </h4>
+                    <p class="text-light mt-3"> My name is Benni Samuel, and i am a website developer who loves coding/programming, my skills comes from a strong dedication and root of experience, which i have developed over the years, my love and passion for programming has propelled me to go more and more into programming, developing more creative ideas and skills. </p>
+
+                    <div class="info-card">
+
+                        <div class="column">
+
+                            <div class="item">
+                                <div class="title">Name</div>
+                                <div class="value">Benni Samuel</div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title">Email</div>
+                                <div class="value">bennisamuel345@gmail.com</div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title">Phone</div>
+                                <div class="value">+2347015660523</div>
+                            </div>
+
+                        </div>
+
+                        <div class="column">
+
+                            <div class="item">
+                                <div class="title">Address</div>
+                                <div class="value">17, Abuja, Nigeria.</div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title">DOB</div>
+                                <div class="value">Nov 13, 2009</div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title">Freelance</div>
+                                <div class="value">Available</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button  data-aos="zoom-in"  class="mt-3 py-2 " style="border-radius: 20px; background-color: dodgerblue; color: white; border: none; width: 40%;"> Download CV </button>
+
+                </div>
+
+            </div>
+
+
+            <div  data-aos="zoom-in"  class="row mt-5">
+                <div class="col-lg-3 col-6 mt-2">
+                    <div class=" d-flex justify-content-center align-items-center" style="background-color: midnightblue; height: 150px; border-radius: 20px;">
+                        <div class=" d-flex text-center mt-4">
+                            <h1 style="color: dodgerblue;"> 20 </h1>
+                            <p class="text-light ms-2"> Digital<br>Products </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-6 mt-2">
+                    <div class=" d-flex justify-content-center align-items-center"  style="background-color: midnightblue; height: 150px; border-radius: 20px;">
+
+                        <div class=" d-flex text-center mt-4">
+                            <h1 style="color: dodgerblue;"> 280 </h1>
+                            <p class="text-light ms-2"> Glass<br>Clients </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-6 mt-2">
+                    <div class=" d-flex justify-content-center align-items-center"  style="background-color: midnightblue; height: 150px; border-radius: 20px;">
+
+                        <div class=" d-flex text-center mt-4">
+                            <h1 style="color: dodgerblue;"> 3K </h1>
+                            <p class="text-light ms-2"> Total<br>Projects </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-6 mt-2">
+                    <div class=" d-flex justify-content-center align-items-center"  style="background-color: midnightblue; height: 150px; border-radius: 20px;">
+
+                        <div class=" d-flex text-center mt-4">
+                            <h1 style="color: dodgerblue;"> 8M </h1>
+                            <p class="text-light ms-2"> Lines<br>Of Code </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h6  data-aos="zoom-in"  style="color: dodgerblue;" class="text-center mt-5"> Skills </h6>
+             <h3  data-aos="zoom-in"  style="font-weight: 600; color: white;" class="text-center text-light"> I Work Hard To Improve My<br> Skills Regularly</h3>
+
+            <div  data-aos="zoom-in"  class="row mt-5 ">
+                
+                <div  data-aos="zoom-in"  class="col-lg-6 col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p style="color: white; font-weight: 600;"> Html</p>
+                        <p style="color: dodgerblue;"> 100%</p>
+                    </div>
+
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 col-12">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p style="color: white; font-weight: 600;"> Svg </p>
+                        <p style="color: dodgerblue;"> 80%</p>
+                    </div>
+
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="80">
+                    <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 col-12 mt-5">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p style="color: white; font-weight: 600;"> Css </p>
+                        <p style="color: dodgerblue;"> 100%</p>
+                    </div>
+
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 col-12 mt-5">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p style="color: white; font-weight: 600;"> Javascript</p>
+                        <p style="color: dodgerblue;"> 75%</p>
+                    </div>
+
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="75">
+                    <div class="progress-bar" style="width: 75%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 col-12 mt-5">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p style="color: white; font-weight: 600;"> Bootstrap </p>
+                        <p style="color: dodgerblue;"> 100%</p>
+                    </div>
+
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-6 col-12 mt-5">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p style="color: white; font-weight: 600;"> React </p>
+                        <p style="color: dodgerblue;"> 80%</p>
+                    </div>
+
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="80">
+                    <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+
+                </div>
+                    
+               
+                    
+
+                 <a href="#nav"> <i style="font-size: 40px; color: dodgerblue;" class="fa-solid fa-circle-arrow-up fixed-bottom mt-5"></i>
+                    </a>   
+            </div>
+ 
+        </div>
+
+
+    </div>
+    
+    
+<script src="js/bootstrap.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init(5000);
+</script>
+</body>
+</html>
